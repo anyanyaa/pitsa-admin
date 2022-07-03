@@ -1,0 +1,310 @@
+.pay {
+  @include media-phone {
+    order: 2;
+  }
+}
+.pay__container {
+  margin-top: 58px;
+  margin-bottom: 30px;
+}
+.pay__window {
+  padding: 30px;
+  border-radius: 6px;
+  background-color: var(--color-shadow-200);
+  @include media-phone {
+    width: 100%;
+  }
+}
+.pay__way-title {
+  padding-top: 10px;
+  padding-bottom: 28px;
+  color: var(--color-accent);
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+.pay__way-types {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.pay__label {
+  color: var(--color-secondary-600);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1;
+}
+.pay__radio {
+  display: none;
+}
+.pay__radio + label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.pay__radio + label:before {
+  content: '';
+  width: 19px;
+  height: 19px;
+  margin-right: 7px;
+  border: 2px solid var(--color-accent);
+  border-radius: 25px;
+}
+.pay__radio + label:after {
+  content: '';
+  display: none;
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  transform: translate(7px, 0);
+  border-radius: 100%;
+  background-color: var(--color-accent);
+}
+.pay__radio:checked + label:after {
+  display: inline-block;
+}
+.pay__card-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 23px;
+  padding-bottom: 28px;
+  gap: 28px;
+  @include media-phone {
+    flex-wrap: wrap;
+  }
+}
+.pay__card-data {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 11px;
+}
+.pay__card-number-input {
+  width: 100%;
+}
+.pay__card-date-input {
+  width: 202px;
+  @include media-mini-phone {
+    width: 133px;
+  }
+}
+.pay__card-cvc-input {
+  width: 109px;
+}
+.pay__card-img-info {
+  @include media-mini-phone {
+    width: 246px;
+  }
+}
+.pay__cash-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 28px;
+  gap: 40px;
+  @include media-phone {
+    row-gap: 14px;
+    padding-top: 13px;
+  }
+  @include media-mini-phone {
+    gap: 14px;
+  }
+}
+.pay__cash-exchange {
+  opacity: 0.7;
+  color: var(--color-secondary-600);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.8;
+}
+.pay__cash-input-exchange-field,
+.pay__input-no-exchange-sum {
+  width: 116px;
+  padding: 9px 17px;
+  border: 2px solid var(--color-background-400);
+  border-radius: 7px;
+  color: var(--color-secondary-600);
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: end;
+}
+.pay__cash-input-sum {
+  border: none;
+  background-color: inherit;
+}
+.pay__cash-input-no-exchange {
+  display: none;
+}
+.pay__cash-input-no-exchange + label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.pay__cash-input-no-exchange + label:before {
+  content: '';
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  border: 2px solid var(--color-accent);
+  border-radius: 3px;
+}
+.pay__cash-input-no-exchange + label:after {
+  content: '';
+  display: none;
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  transform: translate(7px, 0);
+  border-radius: 100%;
+  background-color: var(--color-accent);
+}
+.pay__cash-input-no-exchange:checked + label:after {
+  display: inline-block;
+}
+.pay__cash-label-no-exchange {
+  color: var(--color-secondary-600);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.8;
+}
+.pay__subscribe-form {
+  display: flex;
+  align-items: center;
+  padding-top: 33px;
+  gap: 17px;
+  @include media-mini-phone {
+    align-items: flex-end;
+  }
+}
+.pay__subscribe-input {
+  display: none;
+}
+.pay__subscribe-input + label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  @include media-mini-phone {
+    align-items: flex-start;
+  }
+}
+.pay__subscribe-input + label:before {
+  content: '';
+  display: inline-block;
+  flex-shrink: 0;
+  width: 19px;
+  height: 19px;
+  margin-right: 17px;
+  border: 2px solid var(--primary-color);
+  border-radius: 3px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  @include media-mini-phone {
+    margin-top: 4px;
+  }
+}
+.pay__subscribe-input + label:after {
+  content: '';
+  display: none;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  transform: translate(8px, 0);
+  border-radius: 100%;
+  background-color: var(--primary-color);
+  @include media-mini-phone {
+    transform: translate(8px, 12px);
+  }
+}
+.pay__subscribe-input:checked + label:after {
+  display: inline-block;
+}
+.pay__subscribe-label {
+  @include form-text;
+  opacity: 0.7;
+}
+.pay__subscribe-info {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 100%;
+  background: var(--color-background-200);
+  text-align: center;
+  cursor: pointer;
+}
+.pay__info-letter {
+  @include form-text;
+  opacity: 0.7;
+}
+.pay__next-step {
+  display: flex;
+  grid-column: 1/2;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 60px;
+  gap: 269px;
+  @include media-phone {
+    justify-content: space-between;
+    order: 4;
+    padding-top: 44px;
+    column-gap: 70px;
+    row-gap: 14px;
+  }
+  @include media-mini-phone {
+    justify-content: center;
+  }
+}
+.pay__back,
+.pay__next {
+  display: inline-block;
+  padding: 3px;
+  border: solid var(--color-secondary-400);
+  border-width: 0 3px 3px 0;
+}
+.pay__back {
+  transform: rotate(135deg);
+}
+.pay__next {
+  transform: rotate(-45deg);
+  border: solid var(--color-secondary-600);
+  border-width: 0 3px 3px 0;
+}
+.pay__back-step-button {
+  display: flex;
+  align-items: center;
+  color: var(--color-secondary-400);
+  line-height: 1.2;
+  gap: 15px;
+  @include media-micro-phone {
+    order: 1;
+  }
+}
+.pay__next-step-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 301px;
+  padding: 16px 20px 16px 30px;
+  color: var(--color-secondary-600);
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.8;
+  @include media-phone {
+    width: 224px;
+  }
+}
+.pay__next-step-button-text-mobile {
+  display: none;
+  @include media-phone {
+    display: block;
+  }
+}
+.pay__next-step-button-text {
+  @include media-phone {
+    display: none;
+  }
+}

@@ -1,0 +1,502 @@
+.modal {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+.modal__title {
+  font-size: 2.5rem;
+}
+.modal__form-enter {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding-top: 40px;
+  @include media-phone {
+    flex-wrap: wrap;
+    padding-top: 28px;
+    row-gap: 10px;
+  }
+}
+.modal__form-enter-label {
+  opacity: 0.82;
+  color: var(--color-secondary-300);
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 2.1;
+}
+.modal__form-enter-input {
+  height: 48px;
+  padding: 10px 19px;
+  border: 2px solid var(--color-background-400);
+  border-radius: 8px;
+  background-color: white;
+  color: var(--color-secondary-600);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.8;
+  @include media-phone {
+    width: 100%;
+  }
+  &:disabled {
+    border: none;
+    opacity: 0.82;
+    color: var(--color-secondary-400);
+  }
+}
+.modal__form-enter-input--big {
+  width: 255px;
+  &:disabled {
+    width: 160px;
+    padding: 0;
+  }
+}
+.modal__form-enter-input--small {
+  width: 86px;
+  letter-spacing: 4px;
+}
+.modal__form-enter-send-code {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 70px;
+  @include media-phone {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 6px;
+  }
+}
+.modal__form-enter-button {
+  width: 224px;
+  padding: 16px 59px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.8;
+  @include media-phone {
+    width: 100%;
+  }
+}
+.modal__form-enter-text {
+  width: 319px;
+  color: var(--color-secondary-100);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.6;
+  @include media-phone {
+    width: 100%;
+  }
+}
+.modal__form-enter-link {
+  text-decoration: underline;
+}
+.modal__form-enter-code {
+  display: flex;
+  align-items: center;
+  padding-top: 44px;
+  gap: 50px;
+  @include media-phone {
+    flex-wrap: wrap;
+    padding-top: 20px;
+    row-gap: 10px;
+  }
+}
+.modal__change-code-button {
+  border-bottom: 2px dashed;
+  opacity: 0.82;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 2;
+}
+.modal__input-code {
+  width: 86px;
+  height: 48px;
+  border: 2px solid var(--color-background-400);
+  border-radius: 8px;
+  color: var(--color-secondary-600);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  line-height: 1.8;
+  text-align: center;
+  &:disabled {
+    border: none;
+    opacity: 0.82;
+    background-color: inherit;
+    color: var(--color-secondary-400);
+  }
+}
+.modal__input-code--error {
+  border: 2px solid var(--color-accent);
+}
+.modal__notification-error-code {
+  display: flex;
+  align-items: center;
+  width: 160px;
+  height: 42px;
+  margin-top: 15px;
+  margin-left: 26%;
+  padding: 13px 19px 13px 13px;
+  border-radius: 8px;
+  background: var(--color-accent);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 2;
+  gap: 12px;
+  @include media-phone {
+    margin-left: 148px;
+  }
+  @include media-mini-phone {
+    margin-left: 0;
+  }
+}
+.modal__notification-error-part {
+  position: absolute;
+  margin-top: -37px;
+  transform: rotate(45deg);
+  border: 6px solid var(--color-accent);
+}
+
+// MODAL-ADDRESS
+.modal-address {
+  display: none;
+  @include media-phone {
+    padding: 25px 22px;
+  }
+  &.active {
+    display: block;
+  }
+}
+.modal-address__delivery {
+  display: flex;
+  gap: 15px;
+  padding-top: 30px;
+  @include media-phone {
+    padding-top: 26px;
+  }
+}
+.modal-address__radio {
+  display: none;
+}
+.modal-address__label {
+  width: 166px;
+  margin-bottom: 20px;
+  padding: 10px 38px;
+  background-color: var(--color-background-300);
+  color: var(--color-secondary-400);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2;
+  text-align: center;
+  @include media-phone {
+    width: 124px;
+    padding: 10px 0;
+  }
+}
+.modal-address__radio-wrapper input:checked + label {
+  background: var(--primary-color);
+  color: var(--color-secondary-600);
+  font-weight: 700;
+}
+.modal-address__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 14px;
+  @include media-phone {
+    justify-content: flex-start;
+    gap: 11px;
+  }
+}
+.modal-address__form-input--full {
+  width: 100%;
+}
+.modal-address__form-input--big {
+  width: 495px;
+  @include media-phone {
+    width: 100%;
+  }
+}
+.modal-address__form-input--medium {
+  width: 133px;
+  height: fit-content;
+  @include media-phone {
+    width: 124px;
+    padding: 10px 15px;
+  }
+}
+.modal-address__form-input--small {
+  width: 83px;
+  @include media-phone {
+    width: 73px;
+  }
+}
+.modal-address__form-textarea {
+  width: 100%;
+  height: 76px;
+}
+.modal-address__button {
+  margin-top: 19px;
+  padding: 14px 25px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.8;
+  @include media-phone {
+    width: 100%;
+    margin-top: 7px;
+  }
+}
+
+// MODAL-DELIVERY-TIME
+.modal-delivery-time {
+  display: none;
+  background-color: var(--color-background-100);
+  &.active {
+    display: block;
+  }
+}
+.modal-delivery-time__choose {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 28px;
+  row-gap: 17px;
+  @include media-phone {
+    justify-content: center;
+    gap: 10px;
+  }
+}
+.modal-delivery-time__radio {
+  display: none;
+}
+.modal-delivery-time__label {
+  width: 280px;
+  padding: 12px 19px;
+  border: 2px solid transparent;
+  background-color: white;
+  color: var(--color-secondary-600);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.8;
+  @include media-phone {
+    width: 100%;
+  }
+}
+.modal-delivery-time__radio-wrapper input:checked + label {
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 4px 28px var(--color-box-shadow-100);
+}
+
+// MODAL-PIZZA-MAKE
+.modal-pizza-make {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 976px;
+  gap: 27px;
+  @include media-max-tablet {
+    width: 85%;
+  }
+  @include media-phone {
+    flex-direction: column;
+    width: 94%;
+    padding: 30px 24px 20px;
+    gap: 18px;
+  }
+  @include media-mini-phone {
+    padding: 18px;
+  }
+  &.active {
+    display: flex;
+  }
+}
+.modal-pizza-make__image {
+  width: 100%;
+  height: 100%;
+  @include media-max-tablet {
+    width: 50%;
+  }
+  @include media-phone {
+    width: 251px;
+    height: 251px;
+  }
+}
+.modal-pizza-make__up-part {
+  align-items: flex-start;
+  gap: 15px;
+}
+.modal-pizza-make__title {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.4;
+  @include media-phone {
+    font-size: 1.5rem;
+    line-height: 1.8;
+  }
+}
+.modal-pizza-make__description {
+  color: var(--color-secondary-300);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 2;
+  @include media-phone {
+    font-size: 1.1rem;
+    line-height: 2.5;
+  }
+}
+.modal-pizza-make__selected-options {
+  opacity: 0.6;
+  color: var(--color-secondary-300);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 2.5;
+  @include media-phone {
+    font-size: 1rem;
+    line-height: 2.8;
+  }
+}
+.modal-pizza-make__opt {
+  border-bottom: 2px var(--color-secondary-300) dashed;
+  font-weight: 700;
+}
+.modal-pizza-make__blank-close-button {
+  @include media-phone {
+    display: none;
+  }
+}
+.modal-pizza-make__blank-close-button-mobile {
+  display: none;
+  @include media-phone {
+    display: block;
+    position: absolute;
+    top: 8%;
+    right: 10%;
+  }
+  @include media-micro-phone {
+    top: 5%;
+  }
+}
+.modal-pizza-make__custom {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 9px;
+  padding-bottom: 20px;
+  column-gap: 13px;
+  row-gap: 8px;
+  @include media-phone {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+.modal-pizza-make__radio {
+  display: none;
+}
+.modal-pizza-make__label-size,
+.modal-pizza-make__label-dough {
+  width: 110px;
+  padding: 3px 21px;
+  background-color: var(--color-background-300);
+  color: var(--color-secondary-400);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 2.5;
+  text-align: center;
+}
+.modal-pizza-make__radio-size-wrapper input:checked + label,
+.modal-pizza-make__radio-dough-wrapper input:checked + label {
+  background-color: var(--primary-color);
+  color: var(--color-secondary-600);
+}
+.modal-pizza-make__label-dough {
+  width: 172px;
+  padding: 3px 40px;
+  @include media-phone {
+    width: 117px;
+    padding: 3px 0;
+  }
+}
+.modal-pizza-make__ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 268px;
+  padding: 2px 10px 0 2px;
+  overflow: scroll;
+  row-gap: 13px;
+  @include media-max-tablet {
+    gap: 11px;
+    justify-content: center;
+  }
+  &:after {
+    content: '';
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 78px;
+    background: var(--color-modal-gradient-100);
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 80%;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--primary-color);
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: var(--color-background-300);
+    box-shadow: inset 0 0 6px var(--color-shadow-500);
+  }
+}
+.modal-pizza-make__ingredient-input {
+  display: none;
+}
+.modal-pizza-make__ingredient-label {
+  width: 110px;
+  padding: 14px 12px 17px 13px;
+  border-radius: 12px;
+  outline: 2px solid var(--color-background-400);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.8;
+  text-align: center;
+  @include media-max-tablet {
+    width: 101px;
+  }
+}
+.modal-pizza-make__ingredients-input-wrapper input:checked + label {
+  outline: 2px solid rgb(247 210 45 / 40%);
+}
+.modal-pizza-make__ingredient-label-title {
+  padding-top: 1px;
+  padding-bottom: 11px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1;
+}
+.modal-pizza-make__ingredient-label-price {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.modal-pizza-make__button {
+  width: 100%;
+  margin-top: 26px;
+  padding: 15px 55px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.8;
+  @include media-max-tablet {
+    padding: 15px 10px;
+    font-size: 1.3rem;
+    line-height: 2.1;
+  }
+  @include media-phone {
+    padding: 15px 20px;
+  }
+}
