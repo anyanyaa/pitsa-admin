@@ -1,9 +1,11 @@
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 
-module.exports = function(__, argv) {
 
-  if (argv.mode === 'development') {
+module.exports = function(env, argv) {
+  console.log(env)
+
+  if (env.mode === 'development') {
     return {
       plugins: [
         [

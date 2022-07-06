@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 
-module.exports = function(__, argv) {
+module.exports = function(env, argv) {
   console.log(`mode is: ${argv.mode}`);
 
   if (argv.mode === 'development') {
