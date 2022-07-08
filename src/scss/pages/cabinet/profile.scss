@@ -1,0 +1,93 @@
+.profile__title {
+  padding-top: 57px;
+  padding-bottom: 24px;
+  color: var(--primary-color);
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  @include media-phone {
+    padding-top: 31px;
+    padding-bottom: 20px;
+    font-size: 2.4rem;
+  }
+}
+.profile__form-item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 9px;
+}
+.profile__form-label {
+  @include form-text;
+  padding-bottom: 6px;
+  opacity: 0.8;
+  color: var(--color-secondary-600);
+}
+.profile__form-input {
+  @include media-phone {
+    width: 75%;
+  }
+  @include media-mini-phone {
+    width: 99%;
+  }
+}
+.profile__form-inside-button {
+  width: 87px;
+  margin-left: -111px;
+  text-align: right;
+}
+.profile__data-birth {
+  display: flex;
+}
+.profile__form-input-day {
+  @include form-text;
+  width: 80px;
+  height: 100%;
+  padding-left: 0;
+  border: none;
+  border-right: var(--color-background-100) 1.5px solid;
+  border-radius: 0;
+}
+.profile__form-input-month {
+  @include form-text;
+  width: 100%;
+  height: 100%;
+  padding-left: 15px;
+  border: none;
+  border-radius: inherit;
+}
+.profile__form-out-button {
+  position: absolute;
+  transform: translate(375px, 45px);
+  opacity: 0.82;
+  color: var(--color-secondary-100);
+  @include media-phone {
+    margin-left: 74%;
+    transform: translate(0, 45px);
+  }
+  @include media-mini-phone {
+    width: 100%;
+    margin-left: -6%;
+    transform: translate(-23px, 0);
+    text-align: right;
+  }
+}
+.profile__form-cancel-button {
+  position: absolute;
+  transform: translate(360px, 45px);
+  @include media-phone {
+    margin-left: 72%;
+    transform: translate(0, 45px);
+  }
+  @include media-mini-phone {
+    width: 100%;
+    margin-left: 0;
+    transform: translate(-30px, 0);
+    text-align: right;
+  }
+}
+.profile__form-code-info {
+  opacity: 0.7;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 2;
+}

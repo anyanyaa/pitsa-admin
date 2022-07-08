@@ -1,0 +1,92 @@
+.promo-cards {
+  margin-top: -40px;
+  padding-bottom: 24px;
+  background-image: url('../img/pizza-man.png'), url('../img/noodle-fone-girl-big.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: left 30%, right 83%;
+  @include media-medium-lap {
+    background-size: 8%;
+  }
+  @include media-tablet {
+    padding-top: 28px;
+    overflow: hidden;
+    background: none;
+  }
+  @include media-phone {
+    margin-top: -30px;
+    padding-top: 0;
+  }
+}
+.promo-cards__title {
+  padding-bottom: 24px;
+  color: var(--primary-color);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  @include media-mini-phone {
+    padding-bottom: 18px;
+    font-size: 2.6rem;
+  }
+}
+.promo-cards__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  @include media-tablet {
+    justify-content: space-between;
+  }
+  @include media-mini-phone {
+    gap: 20px;
+  }
+}
+.promo-cards__item {
+  width: 350px;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgb(0 0 0 / 6%);
+  @include media-max-tablet {
+    width: 47%;
+  }
+  @include media-phone {
+    width: 100%;
+  }
+}
+.promo-cards__image {
+  width: 100%;
+}
+.promo-cards__publication {
+  width: 323px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 13px 7px 20px 20px;
+  @include media-max-tablet {
+    width: 100%;
+  }
+}
+.promo-cards__subtitle {
+  padding-bottom: 7px;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  @include media-phone {
+    font-size: 1.6rem;
+    line-height: 1.75;
+  }
+}
+.promo-cards__text {
+  padding-bottom: 20px;
+  color: var(--color-secondary-200);
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.5;
+  @include media-phone {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+}
+.promo-cards__button {
+  width: 159px;
+  padding: 8px 33px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2;
+}

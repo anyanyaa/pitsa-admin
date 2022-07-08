@@ -1,0 +1,63 @@
+:root {
+  --primary-color: #f7d22d;
+  --color-accent: #ff2e65;
+  --color-secondary-100: #9d9d9b;
+  --color-secondary-200: #797979;
+  --color-secondary-300: #686466;
+  --color-secondary-400: #696f7a;
+  --color-secondary-500: #473e43;
+  --color-secondary-600: #231f20cc;
+  --color-background-100: #e3ecf5;
+  --color-background-200: #f1f2f5;
+  --color-background-300: #f3f3f7;
+  --color-background-400: #e2e2e9;
+  --color-background-500: #b8c5d0;
+  --color-box-shadow: rgb(0 0 0 / 6%);
+  --color-box-shadow-acent: rgb(247 210 45 / 40%);
+  --color-box-shadow-100: rgb(0 0 0 / 8%);
+  --color-shadow-200: rgb(241 242 245 / 60%);
+  --color-shadow-300: rgb(35 31 32 / 80%);
+  --color-shadow-400: rgb(35 31 32 / 60%);
+  --color-shadow-500: rgb(0 0 0 / 20%);
+  --color-modal-gradient: linear-gradient(0deg, rgb(247 210 45 / 40%), rgb(247 210 45 / 40%)),
+    rgb(33 49 52 / 20%);
+  --color-modal-gradient-100: linear-gradient(180deg, transparent 0%, white 100%);
+}
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  font-family: Montserrat, serif;
+  font-size: 10px;
+}
+.container {
+  width: 1110px;
+  margin-right: auto;
+  margin-left: auto;
+  @include media-tablet {
+    width: 95%;
+  }
+  @include media-phone {
+    width: 94%;
+  }
+}
+.container-bg {
+  width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
+  @include media-tablet {
+    width: 96%;
+  }
+}
+.container-small {
+  width: 797px;
+  margin-right: auto;
+  margin-left: auto;
+  @include media-tablet {
+    width: 94%;
+  }
+}
+input {
+  font-family: inherit;
+}

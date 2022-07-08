@@ -1,0 +1,15 @@
+/* stylelint-disable */
+
+@import 'node_modules/@glidejs/glide/src/assets/sass/glide.core';
+
+.glide__slide--active .header__slider-img,
+.glide__slide--active + li .header__slider-img {
+  height: 100%;
+  transition: ease;
+  transition-duration: 500ms;
+  opacity: unset;
+  @include media-phone {
+    width: 100%;
+  }
+}
+

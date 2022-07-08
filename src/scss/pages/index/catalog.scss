@@ -1,0 +1,205 @@
+.catalog {
+  background: url('../img/pizza-man.png') no-repeat left top;
+  @include media-medium-lap {
+    background-size: 10%;
+  }
+  @include media-tablet {
+    padding-top: 28px;
+    overflow: hidden;
+    background: url('../img/piza-man-opacity-font.png') no-repeat left -16px;
+  }
+  @include media-phone {
+    padding-top: 0;
+    background: url('../img/piza-man-opacity-font-mobile.png') no-repeat left 6px;
+  }
+}
+.catalog__novelty {
+  padding-bottom: 33px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  @include media-tablet {
+    padding-bottom: 11px;
+    font-size: 2.1rem;
+    line-height: 1.19;
+  }
+  @include media-phone {
+    font-size: 1.9rem;
+  }
+}
+.catalog__novelty-list {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 46px;
+  @include media-tablet {
+    gap: 30px;
+    padding-bottom: 38px;
+  }
+  @include media-phone {
+    padding-bottom: 5px;
+  }
+}
+.catalog__novelty-card {
+  @include shadow-0;
+  display: flex;
+  align-items: center;
+  width: 255px;
+  padding: 14px 35px 14px 17px;
+  border-radius: 12px;
+  background-color: white;
+  gap: 25px;
+  @include media-phone {
+    width: 200px;
+    padding: 11px 32px 11px 14px;
+    gap: 15px;
+  }
+}
+.catalog__novelty-image {
+  @include media-phone {
+    width: 56px;
+  }
+}
+.catalog__novelty-title {
+  padding-bottom: 4px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.16;
+  @include media-phone {
+    padding-bottom: 2px;
+    font-size: 1.4rem;
+  }
+}
+.catalog__novelty-price {
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1.18;
+  @include media-phone {
+    font-size: 1.3rem;
+  }
+}
+.catalog__menu {
+  padding-bottom: 26px;
+  color: var(--primary-color);
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.21;
+  @include media-tablet {
+    font-size: 2.4rem;
+    line-height: 1.2;
+  }
+  @include media-phone {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    font-size: 2.1rem;
+  }
+}
+.catalog__menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include media-tablet {
+    justify-content: center;
+    column-gap: 30px;
+  }
+  @include media-phone {
+    flex-direction: column;
+  }
+}
+.catalog__item {
+  width: 256px;
+  margin-bottom: 49px;
+  @include media-tablet {
+    width: 47%;
+    margin-bottom: 30px;
+  }
+  @include media-phone {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  @include media-mini-phone {
+    margin-bottom: 10px;
+  }
+}
+.catalog__item-link {
+  @include media-tablet {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    padding-bottom: 17px;
+  }
+  @include media-phone {
+    padding-bottom: 10px;
+  }
+}
+.catalog__item-image {
+  @include media-tablet {
+    height: 122px;
+  }
+  @include media-mini-phone {
+    height: 103px;
+  }
+}
+.catalog__item-text-group {
+  @include media-tablet {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.catalog__menu-title {
+  padding-top: 8px;
+  padding-bottom: 14px;
+  color: var(--color-secondary-200);
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.16;
+  @include media-tablet {
+    padding-bottom: 3px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  @include media-mini-phone {
+    font-size: 1rem;
+  }
+}
+.catalog__menu-descript {
+  padding-bottom: 31px;
+  color: var(--color-secondary-300);
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.46;
+  @include media-tablet {
+    padding-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  @include media-mini-phone {
+    font-size: 0.9rem;
+  }
+}
+.catalog__buy-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include media-tablet {
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 22px;
+  }
+}
+.catalog__menu-price {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.catalog__basket-button {
+  width: 126px;
+  padding: 4px 0;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2;
+  @include media-tablet {
+    color: var(--color-secondary-500);
+  }
+}

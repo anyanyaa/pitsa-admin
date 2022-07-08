@@ -1,0 +1,51 @@
+.button__primary {
+  display: inline-block;
+  border-radius: 8px;
+  background: var(--primary-color);
+  text-align: center;
+  cursor: pointer;
+}
+.button__secondary {
+  display: inline-block;
+  padding: 7px 0;
+  border-radius: 28px;
+  background: var(--color-background-300);
+  color: var(--color-secondary-400);
+  text-align: center;
+  cursor: pointer;
+}
+.button__outline {
+  border: 2px solid var(--color-background-100);
+  border-radius: 13px;
+  cursor: pointer;
+}
+.button__tertiary {
+  width: fit-content;
+  border: none;
+  background: none;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.86;
+  cursor: pointer;
+}
+.button-arrows {
+  position: absolute;
+  top: 134px;
+  width: 31px;
+  height: 31px;
+  border: none;
+  border-radius: 27px;
+  background-color: var(--primary-color);
+  &:after {
+    content: '';
+    display: block;
+    position: relative;
+    left: 11px;
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg);
+    border-bottom: 3px solid var(--color-secondary-600);
+    border-left: 3px solid var(--color-secondary-600);
+  }
+}
